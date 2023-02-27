@@ -43,3 +43,15 @@ for (var i = 0; i < navLinks.length; i++) {
     menuBtn.style.pointerEvents = "auto";
   });
 }
+
+// loader 
+window.addEventListener("load", () => {
+  const loader = document.querySelector(".loader");
+
+  loader.classList.add("loader--hidden");
+
+  loader.addEventListener("transitionend", () => {
+    document.body.removeChild(loader);
+  });
+});
+
